@@ -1,0 +1,93 @@
+/*
+Theme Name: Recipe Theme
+Theme URI:
+Author: Cheryl Ju
+Author URI: https://www.cherylju.com
+Description: For your favorite cooking recipes to display online!
+Version: 1.0.0
+License: GNU General Public license v2 or Later
+License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+Text Domain: recipe-theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fund, and share what you've learned.
+*/
+
+
+/*==================================
+
+  Universal Styling
+
+=====================================*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/*==================================
+
+  Header and Header Navigation
+
+=====================================*/
+header {
+  background: #f3eae8;
+}
+.header-logo {
+  text-align: center;
+  padding-top: 1.25rem;
+}
+nav {
+  text-align: center;
+  padding: 1rem 0;
+}
+nav li {
+  list-style-type: none;
+}
+nav a,
+.header-logo-text a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+nav a {
+  font-weight: 400;
+}
+/*==================================
+
+  Home/Hero Page Styling
+
+=====================================*/
+
+
+
+/*==================================
+
+  Responsive Web Coding - 768px by 1024px (Tablet)
+
+=====================================*/
+@media screen and (min-width: 768px) {
+  /* Header and Navigation */
+  nav {
+    display: inline;
+  }
+}
+
+/*==================================
+
+Responsive Web Coding - 1366px by 768px (Laptop)
+
+=====================================*/
+@media screen and (min-width: 1366px) {
+
+}
+
+/*==================================
+
+Responsive Web Coding - 1920px by 1024 px (Desktop)
+
+=====================================*/
+@media screen and (min-width: 1500px) {
+
+}
