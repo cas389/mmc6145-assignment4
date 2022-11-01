@@ -27,31 +27,42 @@ Use it to make something cool, have fund, and share what you've learned.
 nav ul{
     list-style: none;
 }
+h1,
 h2 {
-	color: #f96d23;
-	text-transform: uppercase;
+	color: #035656;
+  font-family: 'Zen Antique', serif;
+	text-transform: capitalize;
+	padding-bottom: 1rem;
 }
-
+main {
+	margin: 2.3rem;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+	padding-bottom: 1rem;
+	text-align: justify;
+}
 /*==================================
 
   Header and Header Navigation
 
 =====================================*/
 header{
-    background-color: #ffdbc7;
-    box-shadow: 1px 1px 5px 0px #ffdbc7;
+    background-color: #edfbfb;
+    box-shadow: 1px 1px 5px 0px #edfbfb;
     top: 0;
     width: 100%;
 		height: 7rem;
 }
 .header-logo-text {
 	padding: 2rem 1rem;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Zen Antique', serif;
 	font-weight: 700;
 	font-size: 1.5rem;
+	text-transform: capitalize;
 }
 .header-logo-text a {
-	color: black;
+	color: #035656;
 	text-decoration: none;
 }
 .logo{
@@ -63,21 +74,22 @@ header{
 	width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #ffdbc7;
+  background-color: #edfbfb;
   overflow: hidden;
 	max-height: 0;
 	transition: max-height .5s ease-out;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+	z-index: 999;
 }
 .header-menu a{
   display: block;
   padding: 30px;
-  color: black;
+  color: #035656;
 	text-decoration: none;
 }
 .header-menu a:hover{
-  background-color: #f96d23;
+  background-color: #035656;
 	color: white;
 }
 .hamburger-menu{
@@ -125,6 +137,7 @@ header{
     transform: rotate(45deg);
     top:0;
 }
+
 /*==================================
 
   Footer
@@ -135,9 +148,9 @@ footer {
 	flex-flow: row wrap;
 	justify-content: center;
 	margin: 1rem 0;
-	background-color: #ffdbc7;
+	background-color: #edfbfb;
 	padding: 1rem;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-;
 	font-weight: 400;
 	font-size: .75rem;
 	width: 100%;
@@ -169,7 +182,7 @@ footer,
   width: 100%;
   height: 2px;
   border-radius: 4px;
-  background-color: #f96d23;
+  background-color: #035656;
   bottom: 0;
   left: 0;
   transform-origin: left;
@@ -181,12 +194,130 @@ footer,
   transform: scaleX(1);
 }
 
+
+/*==================================
+
+  Featured Image and Page Title
+
+=====================================*/
+.featured-image-section {
+  position: relative;
+}
+.featured-image-header {
+  margin-bottom: 30px;
+}
+.featured-image-header img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.featured-image-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to top, white, transparent);
+}
+.page-title{
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 6px;
+  left: 0;
+  margin-left: 2rem;
+}
+
+/*==================================
+
+  Blog Page
+
+=====================================*/
+.featured-blog-post {
+	border: 3px #035656 solid;
+	border-radius: .5rem;
+	padding: 1rem;
+}
+.featured-blog-post:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.two-column {
+  float: left;
+	width: 100%;
+}
+.excerpt {
+	padding-bottom: 0rem;
+	line-height: 1.5rem;
+}
+.featured-blog-image-header img{
+	width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+	border-radius: .5rem;
+}
+.featured-text-container {
+	text-align: justify;
+	padding-bottom: -.25rem;
+}
+.featured-text-container h2 {
+	text-align: center;
+}
+.featured-text-container a {
+	text-decoration: none;
+	color: #035656;
+}
+.button {
+	padding: 1rem;
+	border-radius: .25rem;
+	background-color: #035656;
+}
+.button-para {
+	padding: 2rem;
+	text-align: center;
+}
+.button-para a {
+	color: white;
+}
+.button-para a:hover{
+	color: #035656;
+	background-color: transparent;
+	border: 1px #035656 solid;
+}
 /*==================================
 
   Responsive Web Coding - 768px by 1024px (Tablet)
 
 =====================================*/
 @media screen and (min-width: 768px) {
+	/* Universal Styling */
+	main {
+		margin: 2.8rem;
+	}
+
+	/* Header and Navigation */
+	.logo {
+		margin-left: .2rem;
+	}
+	.header-logo-text {
+		padding: 2rem 1.6rem;
+	}
+
+	/* Featured Image and Page Title */
+	.page-title{
+	  margin-left: 2.5rem;
+	}
+
+	/* Blog Page */
+	.two-column {
+		width: 50%;
+		padding: 1rem;
+   }
+
 	/* Footer Area */
 	footer,
 	.three-column {
@@ -210,6 +341,13 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 
 =====================================*/
 @media screen and (min-width: 1366px) {
+	/* Universal Styling */
+	main {
+		padding: 0rem 4.1rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
 	/* Header and Navigation */
 	.logo {
 		display: inline-block;
@@ -234,6 +372,18 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 	}
 	.hamburger-menu{
 		display: none;
+	}
+
+	/* Featured Image and Page Title */
+	.page-title{
+	  margin-left: 6.5rem;
+	}
+
+	/* Blog Page */
+	.featured-blog-image-header img{
+		width: 100%;
+		max-height: 250px;
+		object-fit: cover;
 	}
 
 	/* Footer Area */
