@@ -63,9 +63,7 @@
   function register_my_menus(){
     register_nav_menus(array(
       'main-menu'     => __('Main Menu'),
-      'footer-left'   => __('Left Footer Menu'),
-      'footer-middle' => __('Middle Footer Menu'),
-      'footer-right'  => __('Right Footer Menu')
+      'footer-right'   => __('Right Footer Menu'),
     ));
   }
 
@@ -97,23 +95,22 @@
     Creating Widget Areas
 
   ====================================== */
-
   function blank_widgets_init(){
     register_sidebar(array(
-      'name'          => ('Sidebar Widget'),
-      'id'            => 'sidebar-widget',
-      'description'   => 'Area in the sidebar for content',
-      'before_widget' => '<div class="sidebar-widget-container">',
+      'name'          => ('Left Footer Widget'),
+      'id'            => 'left-footer-widget',
+      'description'   => 'Area in the left footer for content',
+      'before_widget' => '<div class="left-footer-widget-container">',
       'after_widget'  => '</div>',// End of sidebar widget container
       'before_title'  => '<h2>',
       'after_title'   => '</h2>'
     ));
 
     register_sidebar(array(
-      'name'          => ('Right Footer Widget'),
-      'id'            => 'right-footer-widget',
-      'description'   => 'Area in the right footer for content',
-      'before_widget' => '<div class="right-footer-widget-container">',
+      'name'          => ('Middle Footer Widget'),
+      'id'            => 'middle-footer-widget',
+      'description'   => 'Area in the middle footer for content',
+      'before_widget' => '<div class="middle-footer-widget-container">',
       'after_widget'  => '</div>',// End of sidebar widget container
       'before_title'  => '<h2>',
       'after_title'   => '</h2>'

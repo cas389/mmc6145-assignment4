@@ -30,15 +30,13 @@
       <input class="side-menu" type="checkbox" id="side-menu"/>
       <label class="hamburger-menu" for="side-menu"><span class="hamb-line"></span></label>
 
-      <nav>
+      <nav class="header-menu">
         <!-- Navigation Bar -->
-        <ul class="menu">
-          <?php
-            // Shows the navigation to the page, created by the user
-            wp_nav_menu(array(
-              'theme_location'  => 'main-menu',
-            ));
-          ?>
-        </ul> <!-- End of UL Navigation Tag -->
+        <?php
+          // Shows the navigation to the page, created by the user
+          wp_nav_menu(array(
+            'theme_location'  => 'main-menu',
+          ));
+        ?>
       </nav> <!-- End of Nav Tag -->
     </header> <!-- End of Header Tag -->

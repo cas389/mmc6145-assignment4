@@ -24,27 +24,31 @@ Use it to make something cool, have fund, and share what you've learned.
 	border: 0;
 	box-sizing: border-box;
 }
+nav ul{
+    list-style: none;
+}
+h2 {
+	color: #f96d23;
+	text-transform: uppercase;
+}
 
 /*==================================
 
   Header and Header Navigation
 
 =====================================*/
-ul{
-    list-style: none;
-}
 header{
-    background-color: lightgray;
-    box-shadow: 1px 1px 5px 0px gray;
+    background-color: #ffdbc7;
+    box-shadow: 1px 1px 5px 0px #ffdbc7;
     top: 0;
     width: 100%;
 		height: 7rem;
 }
 .header-logo-text {
-	padding: 2.5rem 1rem;
+	padding: 2rem 1rem;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 .header-logo-text a {
 	color: black;
@@ -52,28 +56,28 @@ header{
 }
 .logo{
     display: inline-block;
-		padding: .5rem;
+		padding: .5rem 0 .5rem 1rem;
 }
-nav {
+.header-menu {
 	margin-top: -1rem;
 	width: 100%;
   height: 100%;
   position: fixed;
-  background-color: lightgray;
+  background-color: #ffdbc7;
   overflow: hidden;
 	max-height: 0;
 	transition: max-height .5s ease-out;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 }
-.menu a{
+.header-menu a{
   display: block;
   padding: 30px;
   color: black;
 	text-decoration: none;
 }
-.menu a:hover{
-  background-color: gray;
+.header-menu a:hover{
+  background-color: #f96d23;
 	color: white;
 }
 .hamburger-menu{
@@ -107,7 +111,7 @@ nav {
 .side-menu {
     display: none;
 }
-.side-menu:checked ~ nav{
+.side-menu:checked ~ .header-menu{
     max-height: 100%;
 }
 .side-menu:checked ~ .hamburger-menu .hamb-line {
@@ -123,11 +127,59 @@ nav {
 }
 /*==================================
 
-  Home/Hero Page Styling
+  Footer
 
 =====================================*/
-
-
+footer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 1rem 0;
+	background-color: #ffdbc7;
+	padding: 1rem;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: .75rem;
+	width: 100%;
+	text-align: justify;
+}
+footer,
+.three-column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+}
+.three-column {
+	padding: .25rem;
+	margin: 1rem;
+}
+.footer-menu {
+	text-align: center;
+	padding: 0rem 5rem;
+}
+.footer-menu a{
+  display: block;
+  color: black;
+	padding: .75rem;
+	text-decoration: none;
+  position: relative;
+}
+.footer-menu a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #f96d23;
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+.footer-menu a:hover::before {
+  transform-origin: right;
+  transform: scaleX(1);
+}
 
 /*==================================
 
@@ -135,21 +187,21 @@ nav {
 
 =====================================*/
 @media screen and (min-width: 768px) {
-  /* Header and Navigation */
-	nav{
-		max-height: none;
-		top: 1.75rem;
-		position: relative;
-		float: right;
-		width: fit-content;
-		background-color: transparent;
+	/* Footer Area */
+	footer,
+	.three-column {
+		padding: .5 .5rem;
 	}
-	.menu li{
-		float: left;
+	.three-column {
+		margin: 1rem 1.5rem;
+		flex: 1;
 	}
-	.hamburger-menu{
-		display: none;
+	.footer-menu {
+		padding: 0rem;
+		margin: 0;
 	}
+}
+
 
 
 /*==================================
@@ -158,7 +210,50 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 
 =====================================*/
 @media screen and (min-width: 1366px) {
+	/* Header and Navigation */
+	.logo {
+		display: inline-block;
+		padding-top: .5rem;
+		max-width: 700px;
+		margin-left: 2.5rem;
+	}
+	.header-logo-text {
+		padding: 2rem 3.5rem;
+	}
+	.header-menu {
+		max-height: none;
+		top: 1.75rem;
+		position: relative;
+		float: right;
+		width: fit-content;
+		background-color: transparent;
+		padding: 0 5.96rem;
+	}
+	.header-menu li{
+		float: left;
+	}
+	.hamburger-menu{
+		display: none;
+	}
 
+	/* Footer Area */
+	footer,
+	.three-column {
+		flex-basis: 100%;
+		padding: 0 2rem;
+	}
+	.three-column {
+		margin: 1rem 3rem;
+		flex: 1;
+	}
+	.footer-menu {
+		text-align: right;
+		padding: 0rem;
+		margin: 0;
+	}
+	.footer-menu a::before {
+		transform-origin: right;
+	}
 }
 
 /*==================================
