@@ -246,6 +246,10 @@ footer,
   display: table;
   clear: both;
 }
+.post-data {
+	text-align: left;
+	padding-bottom: .25rem;
+}
 .two-column {
   float: left;
 	width: 100%;
@@ -267,7 +271,13 @@ footer,
 .featured-text-container h2 {
 	text-align: center;
 }
-.featured-text-container a {
+.individual-posts {
+	padding: 1rem 0;
+	border-bottom: 1px solid #035656;
+}
+.featured-text-container a,
+.post-data a,
+.individual-posts a {
 	text-decoration: none;
 	color: #035656;
 }

@@ -67,10 +67,12 @@
             <article class="individual-posts">
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-              <?php
-                // Display Author and Publish Date Links
-                post_data();
-              ?>
+              <p>
+                <?php
+                  // Display Author and Publish Date Links
+                  post_data();
+                ?>
+              </p>
 
               <?php the_post_thumbnail('medium');?>
 
