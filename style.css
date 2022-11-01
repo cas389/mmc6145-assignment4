@@ -13,7 +13,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fund, and share what you've learned.
 */
 
-
 /*==================================
 
   Universal Styling
@@ -31,28 +30,93 @@ Use it to make something cool, have fund, and share what you've learned.
   Header and Header Navigation
 
 =====================================*/
-header {
-  background: #f3eae8;
+ul{
+    list-style: none;
 }
-.header-logo {
-  text-align: center;
-  padding-top: 1.25rem;
+header{
+    background-color: lightgray;
+    box-shadow: 1px 1px 5px 0px gray;
+    top: 0;
+    width: 100%;
+		height: 4.75rem;
 }
-nav {
-  text-align: center;
-  padding: 1rem 0;
+.logo{
+    display: inline-block;
+    color: white;
+    padding: 1rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: .85rem;
 }
-nav li {
-  list-style-type: none;
+.logo a {
+	color: black;
+	text-decoration: none;
 }
-nav a,
-.header-logo-text a {
-  text-decoration: none;
+nav{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: lightgray;
+  overflow: hidden;
+	max-height: 0;
+	transition: max-height .5s ease-out;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.menu a{
+  display: block;
+  padding: 30px;
   color: black;
-  font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
 }
-nav a {
-  font-weight: 400;
+.menu a:hover{
+  background-color: gray;
+	color: white;
+}
+.hamburger-menu{
+  cursor: pointer;
+  float: right;
+  padding: 2rem;
+}
+.hamb-line {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after{
+    background: black;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu {
+    display: none;
+}
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamburger-menu .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamburger-menu .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamburger-menu .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }
 /*==================================
 
@@ -69,10 +133,21 @@ nav a {
 =====================================*/
 @media screen and (min-width: 768px) {
   /* Header and Navigation */
-  nav {
-    display: inline;
-  }
-}
+	nav{
+			max-height: none;
+			top: 0;
+			position: relative;
+			float: right;
+			width: fit-content;
+			background-color: transparent;
+	}
+	.menu li{
+			float: left;
+	}
+	.hamburger-menu{
+			display: none;
+	}
+
 
 /*==================================
 

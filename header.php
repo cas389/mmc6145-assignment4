@@ -10,8 +10,10 @@
   </head>
 
   <body <?php body_class() ?>>
+    <!-- Header Bar -->
     <header>
-      <div class="header-logo">
+      <!-- Logo Div -->
+      <div class="logo">
         <?php
           // Display logo if it's set, if not display site title
           if(get_header_image() == ''){ ?>
@@ -24,12 +26,19 @@
         ?>
       </div> <!-- End of header-logo Div -->
 
+      <!-- Hamburger Icon for Mobile -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamburger-menu" for="side-menu"><span class="hamb-line"></span></label>
+
       <nav>
-        <?php
-          // Shows the navigation to the page, created by the user
-          wp_nav_menu(array(
-            'theme_location'  => 'main-menu',
-          ));
-        ?>
+        <!-- Hamburger icon -->
+        <ul class="menu">
+          <?php
+            // Shows the navigation to the page, created by the user
+            wp_nav_menu(array(
+              'theme_location'  => 'main-menu',
+            ));
+          ?>
+        </ul>
       </nav> <!-- End of Nav Tag -->
     </header> <!-- End of Header Tag -->

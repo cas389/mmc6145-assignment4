@@ -10,6 +10,9 @@
 
     // Google Fonts
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans:wght@400;700&display=swap', false );
+
+    // JavaScript File
+    wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/js/javascript.js');
   }
 
   add_action('wp_enqueue_scripts', 'custom_theme_scripts');
