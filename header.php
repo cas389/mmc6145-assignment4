@@ -24,14 +24,14 @@
         <?php
           }
         ?>
-      </div> <!-- End of header-logo Div -->
+      </div> <!-- End of logo Div -->
 
       <!-- Hamburger Icon for Mobile -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamburger-menu" for="side-menu"><span class="hamb-line"></span></label>
+      <input class="side-menu" type="checkbox" id="side-menu"/>
+      <label class="hamburger-menu" for="side-menu"><span class="hamb-line"></span></label>
 
       <nav>
-        <!-- Hamburger icon -->
+        <!-- Navigation Bar -->
         <ul class="menu">
           <?php
             // Shows the navigation to the page, created by the user
@@ -39,6 +39,6 @@
               'theme_location'  => 'main-menu',
             ));
           ?>
-        </ul>
+        </ul> <!-- End of UL Navigation Tag -->
       </nav> <!-- End of Nav Tag -->
     </header> <!-- End of Header Tag -->

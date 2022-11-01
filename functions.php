@@ -32,7 +32,7 @@
   ====================================== */
   $custom_image_header = array(
     'width'   => 200,
-    'height'  => 75,
+    'height'  => 100,
     'uploads' => true
   );
 
@@ -121,4 +121,5 @@
   }
 
   add_action('widgets_init', 'blank_widgets_init');
+
 ?>
