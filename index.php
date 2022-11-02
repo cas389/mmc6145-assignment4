@@ -60,7 +60,7 @@
                 </div> <!-- Ends the Div -->
               </section> <?php
 
-            // This else portion of the statement allows the rest of the blog posts to be stylized differently then the featured counter part above.  
+            // This else portion of the statement allows the rest of the blog posts to be stylized differently then the featured counter part above.
             } else { ?>
               <section class="individual-posts">
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
