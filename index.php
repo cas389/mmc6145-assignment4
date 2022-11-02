@@ -74,16 +74,15 @@
                 ?>
               </p>
 
-              <?php the_post_thumbnail('medium');?>
+              <p class="blog-post-thumbnail"><?php the_post_thumbnail('medium');?></p>
 
-              <?php the_excerpt(); ?>
+              <p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+              <p class="read-more-link"><a href="<?php the_permalink(); ?>">Read More...</a></p>
             </article> <!-- Individual Post -->
           <?php } //End of while loop
         }
-        //Pagination function
-        pagination_for_site();
-
-      ?>
+        //Pagination function ?>
+        <p class="pagination-para"><?php pagination_for_site(); ?></p>
     </section>
   </main> <!-- Ends the Main Container -->
 
