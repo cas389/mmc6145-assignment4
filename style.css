@@ -240,6 +240,7 @@ footer,
 	border: 3px #035656 solid;
 	border-radius: .5rem;
 	padding: 1rem;
+	margin-bottom: 2rem;
 }
 .featured-blog-post:after {
   content: "";
@@ -250,10 +251,12 @@ footer,
 	text-align: left;
 	padding-bottom: .25rem;
 }
+
 .two-column {
   float: left;
 	width: 100%;
 }
+
 .excerpt {
 	padding-bottom: 0rem;
 	line-height: 1.5rem;
