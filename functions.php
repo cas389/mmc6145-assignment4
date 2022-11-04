@@ -118,6 +118,16 @@
       'before_title'  => '<h2>',
       'after_title'   => '</h2>'
     ));
+
+    register_sidebar(array(
+      'name'          => ('Single Blog Post Page Widget'),
+      'id'            => 'blog-post-widget',
+      'description'   => 'Area Above Other Posts on the Single Blog Post Pages',
+      'before_widget' => '<div class="blog-post-widget-container">',
+      'after_widget'  => '</div>',// End of sidebar widget container
+      'before_title'  => '<h2>',
+      'after_title'   => '</h2>'
+    ));
   }
 
   add_action('widgets_init', 'blank_widgets_init');

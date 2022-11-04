@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+  <!-- Featured Image Section with Page Title -->
   <section class="featured-image-section">
     <?php
       if (get_the_post_thumbnail(get_the_ID())) {?>
@@ -7,15 +8,16 @@
           <?php the_post_thumbnail('full'); ?>
         </div><!-- Ends the featured-image Div -->
 
-        <div class="page-title">
+        <div class="single-page-title">
           <h2><?php the_title(); ?></h2>
         </div><!-- Ends the page-title Div --><?php
       } else {
           echo '<img class="placeholder-img" src="https://via.placeholder.com/100" />';
       }
     ?>
-  </section>
+  </section><!-- End of Featured Image Section with Page Title -->
 
+  <!-- Main Content Here -->
   <main>
     <?php
       // WordPress Loop
@@ -39,6 +41,8 @@
       }
     ?>
   </main> <!-- Ends the Main Container -->
+
+
 
 
   <aside class="container">
@@ -79,4 +83,7 @@
       ?>
     </div> <!-- End of Row Div -->
   </aside>
+
+
+
 <?php get_footer(); ?>

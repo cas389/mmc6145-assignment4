@@ -73,7 +73,6 @@
                 </p>
 
                 <p class="blog-post-thumbnail"><?php the_post_thumbnail('medium');?></p>
-
                 <p class="excerpt"><?php echo get_the_excerpt(); ?></p>
                 <p class="read-more-link"><a href="<?php the_permalink(); ?>">Read More...</a></p>
               </section> <!-- Individual Post --> <?php
