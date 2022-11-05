@@ -1,32 +1,28 @@
 <?php get_header(); ?>
-
-  <section class="featured-image-section">
-    <div class="featured-image-header">
+  <main class="container">
+    <section class="hero-section full-width">
       <?php the_post_thumbnail('full'); ?>
-    </div><!-- Ends the featured-image Div -->
-
-    <div class="page-title">
-      <h2><?php the_title(); ?></h2>
-    </div><!-- Ends the page-title Div -->
-  </section><!-- Ends thefeatured-image-section Div -->
-
-  <main>
-    <?php
-      // WordPress Loop
-      if(have_posts()){
-        while(have_posts()){
-          the_post(); ?>
-
-      <section class="single-page">
-          <!-- Display Content on Page -->
-          <p><?php the_content(); ?></p>
-      </section> <!-- Ends the Individual Posts Div -->
+      <section class="page-title">
+        <h1><?php the_title(); ?></h1>
+      </section>
+    </section>
 
 
-        <?php
+    <section class="text-area">
+      <?php
+        // WordPress Loop
+        if(have_posts()){
+          while(have_posts()){
+            the_post(); ?>
+
+            <!-- Display Content on Page -->
+            <p><?php the_content(); ?></p>
+
+
+          <?php
+          }
         }
-      }
-    ?>
-  </main> <!-- Ends the Main Container -->
-
+      ?>
+    </section>
+  </main>
 <?php get_footer(); ?>

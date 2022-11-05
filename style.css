@@ -28,11 +28,18 @@ nav ul{
     list-style: none;
 }
 h1,
-h2 {
+h2,
+h3,
+h4 {
 	color: #035656;
   font-family: 'Zen Antique', serif;
 	text-transform: capitalize;
+	text-align: left;
+}
+h1,
+h2 {
 	padding-bottom: 1rem;
+
 }
 main {
 	margin: 2.3rem;
@@ -43,25 +50,17 @@ p {
 	text-align: justify;
 	line-height: 1.5rem;
 }
-
-/*==================================
-
-  Column Layouts
-
-=====================================*/
-.two-column {
-  float: left;
-	width: 100%;
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
-.three-column {
-	flex-basis: 100%;
-	margin: 0 0 5px 0;
-	padding: .25rem;
-	margin: 1rem;
+.container {
+	padding: 0 2rem;
 }
-
-
-
 /*==================================
 
   Header and Header Navigation
@@ -107,6 +106,7 @@ header{
   padding: 30px;
   color: #035656;
 	text-decoration: none;
+	margin: 0 -2rem;
 }
 .header-menu a:hover{
   background-color: #035656;
@@ -164,21 +164,16 @@ header{
 
 =====================================*/
 footer {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin: 1rem 0;
 	background-color: #edfbfb;
-	padding: 1rem;
 	font-family: 'Open Sans', sans-;
 	font-weight: 400;
 	font-size: .75rem;
-	width: 100%;
 	text-align: justify;
+	padding-top: 2rem !important;
+	margin-top: -2rem !important;
 }
-footer {
-		flex-basis: 100%;
-		margin: 0 0 5px 0;
+footer p {
+	line-height: 1rem;
 }
 .footer-menu {
 	text-align: center;
@@ -188,6 +183,7 @@ footer {
   display: block;
   color: black;
 	padding: .75rem;
+	font-size: 1rem;
 	text-decoration: none;
   position: relative;
 }
@@ -208,44 +204,66 @@ footer {
   transform-origin: right;
   transform: scaleX(1);
 }
-footer p {
-	line-height: 1rem;
+
+/*==================================
+
+  Social Media Icons (CSS From WPGossip.com)
+
+=====================================*/
+ul.social-icon {
+  margin-top: 13px;
+	text-align: center;
+}
+ul.social-icon > li {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  margin-left: 6px;
+}
+ul.social-icon > li a {
+	font-size: 1.5rem;
+	padding-top: 2px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+      background-color: #fff;
+  -webkit-transition: all 400ms linear;
+  transition: all 400ms linear;
+      display: table-cell;
+  vertical-align: middle;
+	color: black
+}
+ul.social-icon a:hover {
+	color: white;
+	background-color: black;
 }
 
 /*==================================
 
-  Featured Image and Page Title
+  Featured (Hero) Image and Page Title
 
 =====================================*/
-.featured-image-section {
+.hero-section {
+	margin-top: -2.1rem;
   position: relative;
 }
-.featured-image-header {
-  margin-bottom: 30px;
-}
-.featured-image-header img {
+.hero-section img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
+	filter: brightness(.4);
 }
-.featured-image-header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-image: linear-gradient(to top, white, transparent);
+.page-title {
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
-.page-title{
-  position: absolute;
-  bottom: 20px;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 6px;
-  left: 0;
-  margin-left: 2rem;
+.page-title h1 {
+	color: white;
+	text-align: center;
 }
 
 /*==================================
@@ -386,35 +404,19 @@ footer p {
 
 =====================================*/
 @media screen and (min-width: 768px) {
-	/* Universal Styling */
-	main {
-		margin: 2.8rem;
-	}
-
-	/* Columns Layouts */
-	.two-column {
-		width: 50%;
-		padding: 1rem;
-  }
-	.three-column {
-		padding: .5 .5rem;
-	}
-	.three-column {
-		margin: 1rem 1.5rem;
-		flex: 1;
-	}
-
 	/* Header and Navigation */
 	.logo {
-		margin-left: .2rem;
+  	margin-left: 2rem;
 	}
-	.header-logo-text {
-		padding: 2rem 1.6rem;
+	.hamburger-menu {
+	  margin-right: 2rem;
 	}
 
-	/* Featured Image and Page Title */
-	.page-title{
-	  margin-left: 2.5rem;
+	/* Social Media Icons in Footer */
+	ul.social-icon > li a {
+		font-size: 1rem;
+		width: 30px;
+		height: 30px;
 	}
 
 	/* Blog Page */
@@ -449,51 +451,40 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 =====================================*/
 @media screen and (min-width: 1366px) {
 	/* Universal Styling */
-	main {
-		padding: 0rem 4.1rem;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	/* Column Layouts */
-	.three-column {
-		flex-basis: 100%;
-		padding: 0 2rem;
-	}
-	.three-column {
-		margin: 1rem 3rem;
-		flex: 1;
+	.container {
+		padding: 0 5rem;
 	}
 
 	/* Header and Navigation */
+	.header-logo-text {
+		padding: 2rem 4rem;
+	}
 	.logo {
 		display: inline-block;
 		padding-top: .5rem;
 		max-width: 700px;
-		margin-left: 2.5rem;
-	}
-	.header-logo-text {
-		padding: 2rem 3.5rem;
+		margin-left: 4rem;
 	}
 	.header-menu {
 		max-height: none;
-		top: 1.75rem;
+		top: 1rem;
 		position: relative;
 		float: right;
 		width: fit-content;
 		background-color: transparent;
-		padding: 0 5.96rem;
+		padding: 0 9rem 0 0;
 	}
 	.header-menu li{
 		float: left;
+		padding: 0 2rem;
 	}
 	.hamburger-menu{
 		display: none;
 	}
 
-	/* Featured Image and Page Title */
-	.page-title{
-	  margin-left: 6.5rem;
+	/* Social Media Icons in Footer */
+	ul.social-icon {
+		text-align: right;
 	}
 
 	/* Blog Page */
