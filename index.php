@@ -41,7 +41,7 @@
                 <?php the_post_thumbnail('full'); ?>
               </div>
 
-              <div class="featured-blog-text col-md-4">
+              <div class="featured-blog-text my-auto col-md-4">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <!-- Display Author and Publish Date Links -->
                 <?php post_data(); ?>

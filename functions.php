@@ -62,6 +62,18 @@
   <?php
   }
 
+  function post_data_for_single_posts(){
+    $archive_year   = get_the_time('Y');
+    $archive_month  = get_the_time('m');
+    $archive_day    = get_the_time('d');
+    ?>
+
+    <p class="post-data-for-single-posts">
+      Written by: <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php echo get_the_author(); ?></a> • Published on: <a href="<?php echo get_day_link($archive_year,$archive_month,$archive_day); ?>"><?php echo "$archive_month/$archive_day/$archive_year"; ?></a>
+    </p>
+  <?php
+  }
+
   /* ======================================
 
     Add Menus to the Theme
@@ -124,10 +136,10 @@
     ));
 
     register_sidebar(array(
-      'name'          => ('Single Blog Post Page Widget'),
-      'id'            => 'blog-post-widget',
-      'description'   => 'Area Above Other Posts on the Single Blog Post Pages',
-      'before_widget' => '<div class="blog-post-widget-container">',
+      'name'          => ('Sidebar Widget'),
+      'id'            => 'sidebar-widget',
+      'description'   => 'Area in the sidebar for content',
+      'before_widget' => '<div class="sidebar-widget-container">',
       'after_widget'  => '</div>',// End of sidebar widget container
       'before_title'  => '<h2>',
       'after_title'   => '</h2>'
