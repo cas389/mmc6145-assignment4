@@ -241,6 +241,22 @@
         'label'			=> __( 'Linkedin')
         )
       );
+    $wp_customize->add_setting(
+      'social_instagram',
+      array(
+        'default'           => '',
+        'sanitize_callback' => 'esc_url_raw'
+       )
+      );
+    $wp_customize->add_control(
+      'social_instagram',
+      array(
+        'settings'	=> 'social_instagram',
+        'section'		=> 'social_icons_sec',
+        'type'			=> 'url',
+        'label'			=> __( 'Instagram')
+        )
+      );
     }
     add_action('customize_register', 'beshar_customizer');
 
@@ -250,6 +266,7 @@
 		$pinterest  = get_theme_mod('social_pinterest');
 		$youtube    = get_theme_mod('social_youtube');
     $linkedin   = get_theme_mod('social_linkedin');
+    $instagram  = get_theme_mod('social_instagram');
 
 		if($facebook)
 			echo '<li><a href="'.esc_url( $facebook ).'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
@@ -265,6 +282,9 @@
 
     if($linkedin)
       echo '<li><a href="'.esc_url( $linkedin ).'" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+
+    if($instagram)
+      echo '<li><a href="'.esc_url( $instagram ).'" target="_blank"><i class="fa fa-instagram"></i></a></li>';
   }
   add_action( 'social-media-links', 'social_links');
 

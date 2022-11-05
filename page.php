@@ -1,13 +1,16 @@
 <?php get_header(); ?>
   <main class="container">
+
+    <!-- Hero Image and Page Title -->
     <section class="hero-section full-width">
       <?php the_post_thumbnail('full'); ?>
       <section class="page-title">
         <h1><?php the_title(); ?></h1>
-      </section>
-    </section>
+      </section> <!-- End of page-title Section -->
+    </section> <!-- End of hero-section Section -->
 
 
+    <!-- Main Text on Page.php pages -->
     <section class="text-area">
       <?php
         // WordPress Loop
@@ -17,12 +20,10 @@
 
             <!-- Display Content on Page -->
             <p><?php the_content(); ?></p>
-
-
           <?php
-          }
-        }
+          } // End of While
+        } // End of If statement
       ?>
-    </section>
-  </main>
+    </section> <!-- End of text-area Section -->
+  </main> <!-- End of Main Container -->
 <?php get_footer(); ?>

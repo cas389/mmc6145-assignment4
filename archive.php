@@ -4,6 +4,7 @@
   <main class="container">
     <div class="row">
       <div class="col-sm-12">
+        <!-- Page Title for Archive Pages -->
         <h2><?php
             if(is_category()){
               single_cat_title();
