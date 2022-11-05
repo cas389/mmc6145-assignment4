@@ -1,19 +1,19 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-lg-5">
             <?php
               dynamic_sidebar('left-footer-widget');
             ?>
           </div>
 
-          <div class="col-md-5">
+          <div class="col-lg-5">
             <?php
               dynamic_sidebar('middle-footer-widget');
             ?>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-lg-2">
             <?php
               // Says, if the footer is filled out, display menu, if not, displays a message.
               if(has_nav_menu('footer-right')){ ?>

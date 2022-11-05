@@ -273,51 +273,50 @@ ul.social-icon a:hover {
 =====================================*/
 .featured-blog-post {
 	border: 3px #035656 solid;
-	border-radius: .5rem;
-	padding: 1rem;
-	margin-bottom: 2rem;
 }
 .featured-blog-post:after {
   content: "";
   display: table;
   clear: both;
 }
-.post-data {
-	padding-bottom: .25rem;
-}
-.excerpt {
-	padding-bottom: 0rem;
-	line-height: 1.5rem;
-}
-.featured-blog-image-header img {
+.featured-blog-image img {
 	width: 100%;
   max-height: 300px;
   object-fit: cover;
-	border-radius: .5rem;
 }
-.featured-text-container {
-	text-align: justify;
-	padding-bottom: -.25rem;
+.featured-blog-text {
+  padding: 0 1rem 1rem 1rem;
 }
-.featured-text-container h2 {
-	text-align: center;
+.featured-blog-text h2 {
+	padding: 1rem 0 0 0;
 }
-.individual-posts {
-	padding: 1.5rem 0 .75rem 0;
+.featured-blog-text p,
+.regular-blog-post {
+	padding-bottom: 0 !important;
+	margin-bottom: .35rem !important;
+}
+.regular-blog-post {
 	border-bottom: 1px solid #035656;
 }
-.individual-posts h3 {
-	text-transform: capitalize;
+.regular-blog-post img {
+	padding-top: 1rem;
 }
-.individual-posts,
-.post-data,
+.regular-blog-post h3 {
+	text-transform: capitalize;
+	font-size: 1.5rem;
+}
+.featured-blog-text h2,
+.regular-blog-post h3,
 .read-more-link,
-.blog-post-thumbnail {
+.regular-blog-image,
+.post-data {
 	text-align: center;
 }
-.featured-text-container a,
-.post-data a,
-.individual-posts a {
+.post-data {
+	padding: 0 !important;
+}
+.featured-blog-text a,
+.regular-blog-post a {
 	text-decoration: none;
 	color: #035656;
 }
@@ -327,7 +326,7 @@ ul.social-icon a:hover {
 	background-color: #035656;
 }
 .button-para {
-	padding: 2rem;
+	padding: 1rem 2rem 0 2rem;
 	text-align: center;
 }
 .button-para a {
@@ -341,9 +340,6 @@ ul.social-icon a:hover {
 .read-more-link a {
   display: block;
   position: relative;
-}
-.read-more-link {
-	padding-top: 1rem;
 }
 .read-more-link a::before {
   content: '';
@@ -362,11 +358,13 @@ ul.social-icon a:hover {
   transform-origin: right;
   transform: scaleX(1);
 }
-.blog-post-thumbnail {
-	padding-bottom: .5rem;
+.regular-blog-image {
+	padding: 0rem !important;
 }
 .pagination-para {
 	padding: 1rem 0;
+	text-align: center;
+	font-weight: bold;
 }
 .pagination-para a {
 	text-decoration: none;
@@ -404,24 +402,17 @@ ul.social-icon a:hover {
 
 =====================================*/
 @media screen and (min-width: 768px) {
+	/* Universal */
+	.col-lg-4 {
+		padding: 0 1rem;
+	}
+
 	/* Header and Navigation */
 	.logo {
   	margin-left: 2rem;
 	}
 	.hamburger-menu {
 	  margin-right: 2rem;
-	}
-
-	/* Social Media Icons in Footer */
-	ul.social-icon > li a {
-		font-size: 1rem;
-		width: 30px;
-		height: 30px;
-	}
-
-	/* Blog Page */
-	 .read-more-link a::before {
-		 width: 25%;
 	}
 
 	/* Single Blog Page */
@@ -440,6 +431,13 @@ ul.social-icon a:hover {
 		padding: 0rem;
 		margin: 0;
 	}
+
+	/* Social Media Icons in Footer */
+	ul.social-icon > li a {
+		font-size: 1rem;
+		width: 30px;
+		height: 30px;
+	}
 }
 
 
@@ -454,7 +452,9 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 	.container {
 		padding: 0 5rem;
 	}
-
+	.col-lg-4 {
+		padding: 0 1.5rem;
+	}
 	/* Header and Navigation */
 	.header-logo-text {
 		padding: 2rem 4rem;
@@ -482,31 +482,20 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 		display: none;
 	}
 
-	/* Social Media Icons in Footer */
-	ul.social-icon {
-		text-align: right;
-	}
-
 	/* Blog Page */
-	.featured-blog-image-header img{
+	.featured-blog-image img,
+	.regular-blog-image img {
 		width: 100%;
 		max-height: 350px;
 		object-fit: cover;
 	}
-	.individual-posts,
-	.post-data,
+	.regular-blog-post,
 	.read-more-link,
-	.blog-post-thumbnail {
+	.regular-blog-image {
 		text-align: left;
 	}
 	.read-more-link a:hover::before {
 	  transform-origin: left;
-	}
-	.individual-posts {
-		margin: 0 10rem;
-	}
-	.pagination-para {
-		margin: 0 10rem;
 	}
 
 	/* Single Blog Page */
@@ -517,7 +506,9 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 		margin: 2rem 17rem;
     box-shadow: 1px 1px 5px 0px #edfbfb;
 	}
-
+	.regular-blog-post {
+		padding-top: 2rem;
+	}
 	/* Footer Area */
 	footer {
 		flex-basis: 100%;
@@ -530,6 +521,11 @@ Responsive Web Coding - 1366px by 768px (Laptop)
 	}
 	.footer-menu a::before {
 		transform-origin: right;
+	}
+
+	/* Social Media Icons in Footer */
+	ul.social-icon {
+		text-align: right;
 	}
 }
 
