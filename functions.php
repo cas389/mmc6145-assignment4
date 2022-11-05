@@ -233,26 +233,37 @@
     add_action('customize_register', 'beshar_customizer');
 
   function social_links(){
-  		$facebook   = get_theme_mod('social_facebook');
-  		$twitter    = get_theme_mod('social_twitter');
-  		$pinterest  = get_theme_mod('social_pinterest');
-  		$youtube    = get_theme_mod('social_youtube');
-      $linkedin   = get_theme_mod('social_linkedin');
+		$facebook   = get_theme_mod('social_facebook');
+		$twitter    = get_theme_mod('social_twitter');
+		$pinterest  = get_theme_mod('social_pinterest');
+		$youtube    = get_theme_mod('social_youtube');
+    $linkedin   = get_theme_mod('social_linkedin');
 
-  		if($facebook)
-  			echo '<li><a href="'.esc_url( $facebook ).'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
+		if($facebook)
+			echo '<li><a href="'.esc_url( $facebook ).'" target="_blank"><i class="fa fa-facebook"></i></a></li>';
 
-  		if($twitter)
-  			echo '<li><a href="'.esc_url( $twitter ).'" target="_blank"><i class="fa fa-twitter"></i></a></li>';
+		if($twitter)
+			echo '<li><a href="'.esc_url( $twitter ).'" target="_blank"><i class="fa fa-twitter"></i></a></li>';
 
-  		if($youtube)
-  			echo '<li><a href="'.esc_url( $youtube ).'" target="_blank"><i class="fa fa-youtube"></i></a></li>';
+		if($youtube)
+			echo '<li><a href="'.esc_url( $youtube ).'" target="_blank"><i class="fa fa-youtube"></i></a></li>';
 
-      if($pinterest)
-        echo '<li><a href="'.esc_url( $pinterest ).'" target="_blank"><i class="fa fa-pinterest"></i></a></li>';
+    if($pinterest)
+      echo '<li><a href="'.esc_url( $pinterest ).'" target="_blank"><i class="fa fa-pinterest"></i></a></li>';
 
-      if($linkedin)
-        echo '<li><a href="'.esc_url( $linkedin ).'" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
-  	}
+    if($linkedin)
+      echo '<li><a href="'.esc_url( $linkedin ).'" target="_blank"><i class="fa fa-linkedin"></i></a></li>';
+  }
   add_action( 'social-media-links', 'social_links');
+
+  /* ======================================
+
+   Changing Excerpt Length (Coding by A2 Hosting)
+
+  ====================================== */
+  function new_excerpt_length($length) {
+    return 30;
+  }
+
+  add_filter('excerpt_length', 'new_excerpt_length');
  ?>

@@ -9,3 +9,4 @@ Assignment 4 for UFL class MMC6145
 - [Black Overlay on White, White Text Overtop](https://codepen.io/sonawaneapekshit/pen/RwbmOgW)
 - [Clear Out Width from Bootstrap](https://stackoverflow.com/questions/22996429/override-bootstrap-container-width)
 - [Adding Editable Social Media Codes without Plugin Function](https://wpgossip.com/add-social-media-icons-without-plugin/)
+- [Changing Excerpt Length in PHP](https://www.a2hosting.com/kb/installable-applications/optimization-and-configuration/wordpress2/changing-the-excerpt-length-in-wordpress)
